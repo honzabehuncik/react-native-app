@@ -1,32 +1,31 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Button, SafeAreaView, Alert } from 'react-native';
+import { StyleSheet, Button, View, ScrollView } from 'react-native';
+import MyTabs from './components/button_navigation';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.heading}>Hello world</Text>
-      <Text>Open up App.js to start!</Text>
-      <StatusBar style="auto" />
-      <Button
-        title="Press me"
-        color="#f194ff"
-        onPress={() => Alert.alert('Dobry den')}
-      /> 
+    <View style ={styles.container}>
+      <MyTabs/>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  heading: {
-    fontSize: 120,
-    fontWeight: 500,
-    color: '#fff',
-  },
-
-  container: {
-    flex: 1,
-    backgroundColor: '#2d2d30',
+  button: {
     alignItems: 'center',
     justifyContent: 'center',
+    paddingVertical: 12,
+    paddingHorizontal: 32,
+    borderRadius: 4,
+    elevation: 3,
+    backgroundColor: 'black',
+  },
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },  
+  scrollView: {
+    marginHorizontal: 20,
   },
 });
